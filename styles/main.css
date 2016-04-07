@@ -1,0 +1,153 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+    color: black;
+}
+
+#full-screen-background-image {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#wrapper {
+  position: relative;
+  width: 800px;
+  min-height: 400px;
+  margin: 100px auto;
+  color: #333;
+}
+
+.myPanel .heading{
+    background-color: rgb(111, 112, 112);
+    background-color: rgba(111, 112, 112, 0.5); /*hex code #6F7070*/
+    border-radius: 5px 5px 0 0;
+    color: black;
+    font-size: 175%;
+    padding: 5px;
+
+}
+
+.myPanel .body{
+    background-color: rgb(153,153,153);
+    background-color: rgba(153,153,153, 0.5); /*hex code #999*/
+	border-radius: 0 0 5px 5px;
+    color:black;
+    font-size: 125%;
+    padding: 10px 20px; 
+}
+
+.panel-body{
+	background: #999;
+	font-size: 125%;
+}
+
+.myContainer{
+    background-color: rgb(79,78,82);
+    background-color: rgba(79,78,82,0); /*hex code 4F4E52*/
+	padding: 50px;
+}
+
+/*for index.html only*/
+/*Begin skills and summary*/
+.aboutMe .myPanel .heading{
+    background-color: rgb(111, 112, 112);
+    background-color: rgba(111, 112, 112, 0.4); /*hex code #6F7070*/
+    border-radius: 5px 5px 0 0;
+    color: black;
+    font-size: 200%;
+    padding: 5px;
+}
+
+.aboutMe .myPanel .body{
+    background-color: rgb(153,153,153);
+    background-color: rgba(153,153,153, 0.4); /*hex code #999*/
+    border-radius: 0 0 5px 5px;
+    padding: 10px 20px;
+    font-size: 150%;
+    color:black;
+}
+/*end skills and summary*/
+
+#skills ul{
+    display: inline-block;
+}
+
+#contact-details .header_1 {
+    float: left;
+    width: 350px;
+    text-align: center;
+    margin: 20px 0px 0px 0px; 
+}
+ 
+#contact-details .header_1 img {
+    border: #fff solid 4px; 
+    padding: 16px;
+    margin: 10px 0px 25px 0px;
+}
+ 
+#contact-details .header_2 {
+    float: left;
+    width: 570px;
+    margin: 40px 0px 0px 10px;
+    color: black;
+}
+ 
+#contact-details .header_2 a {
+    font-weight: normal;
+}
+ 
+#contact-details  h1    {
+    margin: 0px 0px 0px 20px;
+    font-size: 52px;
+    font-weight: bold;
+}
+ 
+#contact-details  h3    {
+    margin: 0px 0px 32px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+}
+ 
+#contact-details ul.info_1  {
+    list-style: none;
+    margin: 0px 0px 0px -12px;
+    font-size: 20px;
+}
+
+#contact-details ul.info_2  {
+    list-style: none;
+    margin: 0px 0px 15px -12px;
+    font-size: 20px;
+}
+ 
+#contact-details li.address {
+    background-position: 0px 0px;
+    padding: 0px 0px 0px 40px;
+}
+ 
+#contact-details li.phone   {
+    background-position: 0px 0px;
+    padding: 0px 0px 0px 40px;
+}
+ 
+#contact-details li.email   {
+    background-position: 0px 0px;
+    padding: 0px 0px 0px 40px;
+}
+ 
+#contact-details li.site_url    {
+    background-position: 0px 2px;
+    padding: 0px 0px 0px 40px;
+}
