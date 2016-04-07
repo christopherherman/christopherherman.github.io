@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+	<head>
+			<title>Christopher Herman's Webpage</title>
+			<link rel="stylesheet" type="text/css" href="styles/main.css">
+			<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+			<!-- Latest compiled and minified CSS -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+			<!-- Optional theme -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	</head>
+	<body>
+		<!--background image-->
+		<img alt="full screen background image" src="images/background1.png" id="full-screen-background-image" /> 
+		<!--end background image-->
+		<header class="navbar-inverse" role="banner">
+			<div class="container">
+			<nav role="navigation">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+			  <div class="container">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">Christopher Herman</a>
+			    </div>
+
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav">
+				        <li><a href="index.html">Home</a></li>
+				        <li><a href="Education.html">Education</a></li>
+				        <li><a href="WorkExperience.html">Work Experience</a></li>
+				        <li class="dropdown active">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="sr-only">(current)</span><span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="Projects.html#bicycle">Electric Bicycle</a></li>
+				            <li><a href="Projects.html#bartender">Automated Bartender</a></li>
+				            <li><a href="Projects.html#lineFollower">Line-Following Robot</a></li>
+				          </ul>
+				        </li>
+				        <li class="dropdown">
+				          <a href="Travel.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Travel<span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				          	<li><a href="Travel.html#chicago">Chicago, Illinois</a></li>
+				            <li><a href="Travel.html#chile">Chile</a></li>
+				            <li><a href="Travel.html#colombia">Colombia</a></li>
+				            <li><a href="Travel.html#dominicanRepublic">Dominican Republic</a></li>
+				            <li><a href="Travel.html#france">France</a></li>
+				            <li><a href="Travel.html#germany">Germany</a></li>
+				            <li><a href="Travel.html#hawaii">Hawaii</a></li>
+				            <li><a href="Travel.html#italy">Italy</a></li>
+				            <li><a href="Travel.html#mexico">Mexico</a></li>
+				            <li><a href="Travel.html#moab">Moab, Utah</a></li>
+				            <li><a href="Travel.html#myrtleBeach">Myrtle Beach, South Carolina</a></li>
+				            <li><a href="Travel.html#newYork">New York, New York</a></li>
+				            <li><a href="Travel.html#panama">Panama</a></li>
+				            <li><a href="Travel.html#spain">Spain</a></li>
+				            <li><a href="Travel.html#switzerland">Switzerland</a></li>
+				            <li><a href="Travel.html#yellowstone">Yellowstone National Park</a></li>
+				          </ul>
+				        </li>
+				      </ul>
+				    </div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+				</nav>
+				</nav>
+				</div>
+			</header>
+
+			<div class="container myContainer">
+				<div class="myPanel col-sm-12">
+					<div class="heading" id="bicycle">
+						<font size = "+5"><center><strong>Electric Bicycle</strong></center></font>
+					</div>
+					<div class="body">
+						<p>
+							<center>
+								<img src="images/bicycle/TheRace.jpg" alt="TheRace" style="width: 350px;">
+							</center></br>
+							For one of my graduate courses at Utah State University, I took a two semester Electric Vehicles course. The first semester was theoretical and the second was a hands-on lab course. As a final outcome of the course, my partner, Tarak, and I developed a 2-stage bi-directional power converter on a PCB which can run a BLDC motor from battery power. The physical system structure is shown in the next picture. The part of the figure in red is what we have built on our PCB.
+						</p>
+						<p>
+							<center>
+								<img src="images/bicycle/System_Structure.jpg" alt="System_Structure" style="width: 350px;">
+							</center></br>
+							The battery pack used in our system is a 8 cell Lithium-ion (LiFePO4) battery of 9AHr capacity. The Battery pack has a nominal voltage of 24V, maximum voltage of 30.8V and minimum voltage of 18.4V. The battery output is taken to converter input, through a 30A fuse (passive protection). The input stage of the power converter has NTC in series with the battery input line so that inrush current is limited as we connect the battery to our power converter which acts as large capacitor at the outset. The battery voltage is then converted to a regulated 50V bus, employing a bi-directional DC-DC boost converter. The boost converter is needed to be bi-directional so that regenerative braking can be done and part of wheel energy can be transferred to battery pack. The DC output of boost converter is converted to 3-&#934; AC by means of a 3-&#934; inverter. Output of the 3-&#934; inverter is connected to the motor terminals after passing them through 30A fuse, for each phase. The motor used in our system is a 3-&#934; 3 terminal hub BLDC motor. The motor is designed to operate from 36V to 72V with power ranging from 500W to 1000W. Motor position information is fed back to the motor drive controller so that appropriate switches of the inverter can be turned ON/OFF. Rider command such as Throttle and Brake are taken as control input to our system which is then processed by Arduino-Leonardo microcontroller and a few hardware circuits to provide necessary control signals to both the power conversion stages.
+						</p>
+						<p>
+							The power converter is rated for 350W continuous operation with peak power handling capability of 500W. And an auxiliary power supply board was used in our system to generate +12V and +5V, to provide bias supply for the control circuitry of our power converter. The auxiliary power supply is supplied from the battery pack and this power supply is rated for operation with 9V-36V input which covers the range of battery pack voltage.
+						</p>
+						<p>
+							The following image shows the power converter structure and its control architecture.
+							<center>
+								<img src="images/bicycle/System_Structure_2.jpg" alt="System_Structure_2" style="width: 350px;">
+							</center></br>
+							The boost converter converts V_{bat} to V_{bus} by means of a dual-loop control strategy. The outer control loop controls the V_{bus} by taking reference voltage command from the microcontroller and generates required current reference signal for the current control loop, through voltage loop controller G_{cv}. The output of the voltage loop is limited between +20A and -7.5A current reference. Similarly, the current controller (G_{ci}) regulates the inductor average current by means of controlling the duty ratio of the boost converter. Output of the current controller or the duty ratio signal is also limited between 10% and 85%.  Both the voltage and current controller, along with their output limits, are implemented using LM324 OPAMP. The bandwidth of the inner current loop is designed to be 4kHz and for the outer voltage loop the bandwidth is designed to be 400Hz. In the final on-board controller, slight tuning has been done on the controller to have desired performance. The duty ratio signal is then passed to a PWM chip (TL494) which generates PWM pulses, with 400ns dead-time, for the top and bottom MOSFETs of the boost converter. These PWM pulses are fed to the gate driver (IR21834PBF) which finally turns ON/OFF the MOSFETs. The PWM pulses are disabled, by means of additional logic circuitry, in the event of a fault. In addition, the PWM pulses can also be disabled by the microcontroller. The Boost converter switching frequency is selected to be 50kHz. Since the current in the boost inductor has considerable amount of ripple at switching frequency, appropriate filtering is done on the current sense signal, before passing it to the controller. Similar filtering is done for the voltage sense signal by means of a differential amplifier.
+						</p>
+						<p>
+							 The 3-&#934; inverter control is done in a different fashion. Hysteresis control technique is employed to control the motor phase current(s). The current reference is derived from the throttle and brake input, based on the algorithm written in the microcontroller. When the bike needs to accelerate, a positive current reference is generated and when it's needed to brake, a negative current reference is generated. The actual motor current is compared with the set current reference to regulate it within a current ripple band of 2A. The hysteresis comparator circuit is tested separately with a R-L load before driving the motor. The following figure shows the result of this test. For this test, the inverter was supplied with external 50V source and phase C of the inverter was used to drive the R (13&Omega;) - L (90&mu;H) load which was connected across the switching node of phase C and ground of DC bus. The hysteresis band control resistor was adjusted to have 2A pk-pk current ripple.
+
+							 <center>
+								<img src="images/bicycle/Hysteresis.jpg" alt="Hysteresis" style="width: 350px;">
+							</center></br>
+
+							 To drive the right motor phase at right time, position information of the motor is needed and this is accomplished by the Hall sensor signals coming from the motor. And by use of appropriate digital logic circuit, in conjunction with pulses from hysteresis controller, final gate-drive signals were derived to drive the six MOSFETs of the 3-&Phi; inverter. A dead-time circuit is implemented, as part of the logic circuit, to provide 700ns dead-time between gate drive signals of MOSFETs of same leg, to avoid shoot-through problem. IR2136 IC is used as gate driver for our inverter. The following two figures show the result of the logic circuit implemented along with the pulses from Hall sensor, for phase A. The gate driver has active low logic input and hence the PWM signals shown in the figures are also of active low logic.
+
+							 <center>
+								<img src="images/bicycle/Test_1.jpg" alt="Test 1" style="width: 350px;">
+							</center>
+							<center>
+								<img src="images/bicycle/Test_2.jpg" alt="Test 2" style="width: 350px;">
+							</center></br>
+
+							Rider's command on the throttle is taken as magnitude of positive current reference for the motor so that positive driving torque can be applied on the motor to accelerate. When the brake lever is pressed, then inverter gate driver is disabled and thus allowing motor currents to flow back to DC bus, through the anti-parallel diodes of the inverter. This is first level of braking where part of wheel's kinetic energy is transferred back to battery pack. The second stage of braking is initiated when the push button is presses along with the brake lever. And a negative current reference is generated for the motor phase current in such scenario, so that a negative driving torque is applied to the motor, allowing faster braking. The current reference signals are passed through a filter to control the rate of rise/fall of current reference as well as to reject ripple generated by the PWM signals (reference signals) from the microcontroller. We have used a 3-position switch to enable/disable different stages of the power converter, depending on the position of the switch. If the switch is in position 1, both boost and the inverter are disabled and thus reduces unnecessary battery drainage. Then, the boost converter is enabled when the switch is flipped to position 2. And finally when the switch is in position 3, both boost and inverters are enabled and the converter becomes ready to drive the wheel.
+						</p>
+						<p>
+							The circuit board developed also has few protections in-built. We have boost output over-voltage protection set at 60V and under-voltage protection set at 38V, with a hysteresis band of 5V, for each of them. Similarly, we have boost over-current protection set at +24A and -8.5A, with a hysteresis band of 3A. These protection circuits were tested for functionality and were adjusted wherever required, before doing any power test on the converter. The under-voltage protection disables the inverter alone whereas all other faults disable the boost converter. In addition to above active protections, few passive protections are implemented in the power converter such as fuse, NTC at battery input, fuse at inverter output, TVS and MOV at boost output (to restrict over-voltage during regenerative braking) and TVS at external signals interfacing the board.
+						</p>
+						<p>
+							In the course of testing, the control circuitry were tested first and different set points were adjusted, wherever required. Then the protection circuits were tested for their functionality. Next, the boost converter was tested, with 24V from a regulated power source, in open loop and the load was gradually increased to 330W to check that power circuit is good. Then the current loop of the converter was tested, followed by voltage loop testing, for both steady state stability and transient response. Again, the boost load was increased upto 330W for testing the closed loop boost converter. In this phase of testing, inverter circuit was made non-operational.
+						</p>
+						<p>
+							In the second stage of testing, the boost converter was permanently disabled and the inverter was supplied with 50V, from an external power supply. Then the hysteresis comparator was given with a triangular reference signal of 10kHz, from function generator, oscillating around 2.5V, since the current sensors provide 2.5V output when the current through it is zero. This way we generated the PWM signal for different phases. Next, the wheel position was manually adjusted to pass the PWM signals, from the output of hysteresis comparator, to the inverter gate driver, one phase at a time. Then the Gate to ground signals of both top and bottom MOSFETs were checked to ensure there is sufficient dead-time between them. Then, each leg of the inverter was loaded with R-L load (as mentioned earlier) and tested for 100W load and thus ensuring that the power circuit of the inverter is okay. And after passing all the test, the inverter output was connected to the motor and then the motor was spun with reference signal coming from the throttle of the bike. The braking operation was also tested at this stage.
+						</p>
+						<p>
+							In third stage of testing, the boost converter and the inverter were integrated together along with the auxiliary power supply. The microcontroller was also coded with the required algorithm and was used for testing in this phase. The input of the converter was supplied from 24V external power supply and then we started the boost operation by changing the 3 position switch from position 1 to position 2. Next, we changed the switch position to position 3 and inverter stage was enabled. Then the throttle was rolled to run the bike wheel and consecutively the 2-stage braking was tested. In this stage of testing, the input power supply was also connected to a resistive load, in series with a diode to allow regenerative braking. The power supply current limit was set to 6A initially which was later increased to 30A, to check everything is okay, before connecting it to the battery pack.
+						</p>
+						<p>
+							Finally the entire converter system was connected between the battery and the motor and acceleration and braking tests of the wheel were done. And then the bike was taken for a ride for a road test. Final adjustments were done on the maximum positive and negative motor current reference, after the road test. The following figure shows the result during regenerative braking. The bike was mounted on a trainer with load. It can be seen that the battery current goes negative confirming regenerative braking. Since the inertia of the bike is less and load resistance (offered by the trainer) was high, we are only able to get a little amount of energy. But, in real road-ride scenario, the overall inertia of the system will be high and regenerative braking will fetch more energy back to the battery.
+
+							<center>
+								<img src="images/bicycle/Regenerative_Braking.jpg" alt="Regenerative Braking" style="width: 350px;">
+							</center> </br>
+
+							The following image shows the power converter assembled within the box.		
+						</p>
+						<p>															
+							<center>
+								<img src="images/bicycle/Slide1.jpg" alt="Power Converter Assembled" style="width: 600px;">
+							</center>
+						</p>
+						<p>
+						<center>
+								<img src="images/bicycle/Tarak_Chris.jpg" alt="Tarak and Chris" style="width: 500px;">
+						</center> </br>
+						<center>
+								<img src="images/bicycle/Winning_Team.jpg" alt="Winning Team" style="width: 600px;">
+						</center>
+						</p>
+
+						<center>
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MNqZdCLBC6U"></iframe>
+						</center>
+
+					</div>
+				</div>	
+
+				<div class="myPanel col-sm-12">
+					<div class="heading" id="bartender">
+						<font size = "+6"><center><strong>Automated Bartender</strong></center></font>
+					</div>
+					<div class="body">
+						<p>
+							<center>
+								<img src="images/AutomatedBartender/Design_Night.jpg" alt="Automated Bartender" style="width: 550px">
+							</center></br>
+							For my senior design project, I worked with Isaac Cocar on designing and building an Automated Bartender. The Automated Bartender we came up with is a system of multiple containers in line with flow sensors and solenoid valves designed to allow a user to select from a list of beverages, or create their own beverage, and have it prepared for them. The system allows for multiple beverages to be requested by the user. A bluetooth receiver and a partnered application allow for a user to either use the tablet located on the enclosure of the AB or to use their handheld device to request their beverage. 
+						</p>
+						<p>
+							Our initial plan for the Automated Bartender was to use the original alcohol bottle and invert it on a ring. We were going to rotate the entire ring of bottle above a single cup on a pressure plate. The pressure plate was to work as our cup detector. We had an issue with this setup. The motor would have had to have been a much larger and stronger motor in order to rotate all the bottles and liquid. We also ran into a much larger issue that ended up being the main reason for our switch to the current setup. The bottles when inverted had no way to release the pressure from the vacuum induced by the release of the alcohol.
+						</p>
+						<p>
+							In an attempt to address this issue we took many approaches. The initial idea was to find a fitting to attach the bottles threaded end to the threading on the flow sensor. In our research we were unable to find such a fitting. We attempted to make our own fittings by using a liquid pourer used in many bars. An issue that arose through this method was the pressure release method in the pourer only functioned at a 45 degree angle and for short amounts of time. This would only allow the bottle to go to that angle and would need to be re-tipped for each ounce required. For this reason, this method was ruled out.
+						</p>
+						<p>
+							From this method, we wend with a peristaltic pump method. The bottle would be able to sit upright with tubing fed in. The pump would then suck the desired amount out of the bottle and deliver it to the cup. The peristaltic pump has very accurate measurements. This would have eliminated our need for the flow sensors. The downside to the pump was that it was incredibly slow. A single cup would have taken over minute to fill. For this reason, we eliminated this method
+						</p>
+						<p>
+							To get to our current set up, we went through all these stages. We knew we could not use the original bottles. We knew we would need to use some sort of sensor for feedback of the amount of liquid that has passed through. We also decided that in order to obtain our desired queue we would need to have a rotating platform opposed to a rotating dispensing system.
+						</p>
+						<p>
+							On our current set up we are using liquid containers that we have drilled a hole through the bottom allowing a male threaded adapter to be our feed unit, and allows a female of same thread to be on the bottom side of the container to thread onto the male, attaching the feed unit to the flow sensor. Here we have had issues also. This issue is that we have leaking issues. Using o-rings the bottles leak plenty when filled with water. A solution we have come up with is using cork sheets. We cut the cork sheet to create gaskets. This has essentially cut out the leaking, with minor drips occurring over the period of a few days.
+						</p>
+						<p>
+							On our rotating platform we also have had a few issues. The original motors we were going to use were rated to handle our full load, however in testing they burnt out very quickly. We went through two of these motors before arriving at our current motor. On the rotating platform we were also using hand crafted and tooled engine mounts, potentiometer mounts, and supports. This gave us minor clearance issues and stability issues. In order to fix this we 3-d printed a new motor mount, a potentiometer mount to fit on the motor mount, new supports, and new gears.
+						</p>
+						<p>
+							Our current dispensing set-up consists of five 1000mL containers, two 1500mL containers, seven flow sensors, seven gravity-fed valves and all appropriate fittings and adapters. The flow sensors are positioned between the container and the valve. This set-up gives us an accurate flow count.
+							<center><img src="images/AutomatedBartender/top.png" alt="Dispensing Unit" style="width: 350px;"></center></br>
+							The platform is made of an acrylic sheet with five holes cut out for the cups to sit in. There is also a grooved ridge on the underside allowing for four ball-bearing supports to fit smoothly within and support the weight. The motor is mounted within a support, allowing only the shaft of the motor to be exposed. The potentiometer is externally attached to the motor mount with a sleeve. The shaft of the motor and the shaft of the potentiometer are connected together with gears.
+							<center><img src="images/AutomatedBartender/bottom.png" alt="Rotating Platform" style="width: 350px;"></center></br>
+							<center><img src="images/AutomatedBartender/MotorMountCutout.png" alt="Motor Mount Cutout" style="width: 350px;"></center></br>
+							<center><img src="images/AutomatedBartender/potMount.png" alt="MotorMount" style="width: 350px;"></center></br>
+							We implemented an analog PI controller on the PCB to control the position of the platform. This gives us accurate control over the platform and ensures that we can center each of the cups above each of the positions. In each position, we have a cup detector made using IR emitter/detectors. The detector ensures that a cup is in the dispensing position before allowing the valves to open, preventing any errors from occurring.
+							<center>
+								<img src="images/AutomatedBartender/PCB.jpg" alt="PCB" style="width: 550px">
+							</center>
+						</p>
+						<p>
+							<center><img src="images/AutomatedBartender/controller.png" alt="Controller" style="width: 550px;"></center></br>
+							We went through many different design iterations to arrive at our final set-up. These iterations included inverted bottles, single cup platforms, and peristaltic pump set-ups. There were many design changes, and many hiccups and roadblocks along the way. With our final design, we really ended up with a proper system. Our only current issue, and a small one it is, is minor leaking from the seal on the bottom of the containers.
+						</p>
+						<p>	
+							We did not quite reach the desired low budget cost that we were desiring. This current cost that we have shown is using prototyping materials as apposed to a mass production type product. We would not need to use a development microcontroller, and instead could use much cheaper pre-programmed chips. We have also eliminated the need for a touchscreen HMI on the enclosure with the development of our android application. This greatly reduces the cost of the product. Other items when purchased in bulk for mass production would also greatly reduce the cost.
+						</p>
+						<center>
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RX6PwHMrLa0"></iframe>
+						</center>
+						This video gives a closer look at the liquid being dispensed.
+						<center>
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RWqfnCo14xs"></iframe>
+						</center>
+						This video is a demonstration of the initial valve testing.
+						<center>
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fFOcHW_203I"></iframe>
+						</center>
+					</div>
+				</div>
+				<div class="myPanel col-sm-12">
+					<div class="heading" id="lineFollower">
+						<font size = "+5"><center><strong>Line Following Robot</strong></center></font>
+					</div>
+					<div class="body">
+						<p>
+							<center>
+								<img src="images/LineFollower/Rob.jpg" alt="Rob the Robot" style="width: 350px">
+							</center></br>
+							One of the projects from my undergraduate career at Utah State University was a line following robot. The robot used an array of paired infrared emitter/detectors.
+						</p> 
+							<center>
+								<img src="images/LineFollower/sensors.jpg" alt="Rob the Robot" style="width: 250px">
+							</center></br>
+							The array used a weighted average to control the PWM of the differential steering. 
+						<p>
+							<center>
+								<img src="images/LineFollower/block_diagram.jpg" alt="Rob the Robot" style="width: 400px">
+							</center></br>
+							<center>
+								<img src="images/LineFollower/Mathematical_model.jpg" alt="Rob the Robot" style="width: 200px">
+							</center></br>
+							We ended up with a very simple design. The robot was quick and responsive. If we were to do the project againg, the robot could have been designed much smaller and faster. 
+						</p>
+							<center>
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0vQ21_Q39RI"></iframe>
+							</center>
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</body>
+</html>
+
+
+
