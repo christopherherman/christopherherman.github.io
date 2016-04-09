@@ -134,25 +134,25 @@ a {
  
 #contact-details li.address {
     background-position: 0px 0px;
-    padding: 0px 0px 0px 40px;
+    padding: 0px 0px 0px px;
 }
  
 #contact-details li.phone   {
     background-position: 0px 0px;
-    padding: 0px 0px 0px 40px;
+    padding: 0px 0px 0px px;
 }
  
 #contact-details li.email   {
     background-position: 0px 0px;
-    padding: 0px 0px 0px 40px;
+    padding: 0px 0px 0px 0px;
 }
  
 #contact-details li.site_url    {
     background-position: 0px 2px;
-    padding: 0px 0px 0px 40px;
+    padding: 0px 0px 0px px;
 }
 
 #contact-details li.resume    {
     background-position: 0px 2px;
-    padding: 0px 0px 0px 40px;
+    padding: 0px 0px 0px px;
 }
