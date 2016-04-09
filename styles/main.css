@@ -62,7 +62,7 @@ a {
 /*Begin skills and summary*/
 .aboutMe .myPanel .heading{
     background-color: rgb(111, 112, 112);
-    background-color: rgba(111, 112, 112, 0.4); /*hex code #6F7070*/
+    background-color: rgba(111, 112, 112, 0.6); /*hex code #6F7070*/
     border-radius: 5px 5px 0 0;
     color: black;
     font-size: 200%;
@@ -71,7 +71,7 @@ a {
 
 .aboutMe .myPanel .body{
     background-color: rgb(153,153,153);
-    background-color: rgba(153,153,153, 0.4); /*hex code #999*/
+    background-color: rgba(153,153,153, 0.6); /*hex code #999*/
     border-radius: 0 0 5px 5px;
     padding: 10px 20px;
     font-size: 150%;
