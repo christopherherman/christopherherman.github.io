@@ -32,7 +32,6 @@ html, body {
     font-size: 175%;
     font-family: "Times New Roman", Times, serif;
     padding: 5px;
-
 }
 
 .myPanel .body{
@@ -56,6 +55,10 @@ html, body {
 	padding: 50px;
 }
 
+.header-container{
+    max-width: 55%;
+}
+
 /*for index.html only*/
 /*Begin skills and summary*/
 .aboutMe .myPanel .heading{
@@ -67,13 +70,18 @@ html, body {
   padding: 5px;
 }
 
-.aboutMe .myPanel .body{
-  background-color: rgb(153,153,153);
-  background-color: rgba(153,153,153, 0.6); /*hex code #999*/
-  border-radius: 0 0 5px 5px;
-  padding: 10px 20px;
-  font-size: 125%;
-  color:rgb(245, 245, 245);
+.aboutMe .myPanel .body {
+    background-color: rgb(153,153,153);
+    background-color: rgba(153,153,153, 0.6); /*hex code #999*/
+    border-radius: 0 0 5px 5px;
+    padding: 10px 20px;
+    font-size: 125%;
+    color: rgb(245, 245, 245);
+    text-align: center;
+}
+
+.aboutMe .myPanel .body .summary{
+  text-align: left;
 }
 /*end skills and summary*/
 
